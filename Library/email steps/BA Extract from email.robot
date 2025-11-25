@@ -13,9 +13,7 @@
     </typed-variables>
     <parameters/>
     <requires-simple-input>false</requires-simple-input>
-    <return-variables>
-      <variable name="allTypes"/>
-    </return-variables>
+    <return-variables/>
     <store-in-database-variables/>
     <referenced-types>
       <type name="AllTypes"/>
@@ -28,7 +26,7 @@
   </prologue>
   <property name="variables" class="Variables">
     <object class="Variable" serializationversion="1">
-      <property name="name" class="String" id="0">allTypes</property>
+      <property name="name" class="String">allTypes</property>
       <property name="initialAssignment" class="InitialVariableAssignment">
         <property name="type" class="TypeReference" serializationversion="0">
           <property name="typeName" class="String">AllTypes</property>
@@ -60,9 +58,9 @@
   </property>
   <property name="avoidExternalReExecution" class="Boolean">false</property>
   <property name="transitionGraph" class="Body">
-    <blockBeginStep class="BlockBeginStep" id="1"/>
+    <blockBeginStep class="BlockBeginStep" id="0"/>
     <steps class="ArrayList">
-      <object class="Transition" serializationversion="3" id="2">
+      <object class="Transition" serializationversion="3" id="1">
         <property name="name" class="String">Load File</property>
         <property name="stepAction" class="LoadFile">
           <property name="fileNameExpression" class="kapow.robot.plugin.common.support.expression.stringexpr.FileNameValueStringExpression">
@@ -77,7 +75,7 @@
             <property name="ancestorProvider" class="BrowserConfigurationSpecificationAncestorProviderForStep"/>
           </property>
         </property>
-        <property name="elementFinders" class="ElementFinders" id="3"/>
+        <property name="elementFinders" class="ElementFinders" id="2"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
@@ -85,7 +83,7 @@
         <property name="enabled" class="Boolean">true</property>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="4">
+      <object class="Transition" serializationversion="3" id="3">
         <property name="name" class="String">Extract from Email</property>
         <property name="stepAction" class="ExtractFromEmail">
           <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
@@ -100,7 +98,7 @@
             </property>
           </property>
         </property>
-        <property name="elementFinders" idref="3"/>
+        <property name="elementFinders" idref="2"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
@@ -108,7 +106,7 @@
         <property name="enabled" class="Boolean">true</property>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="5">
+      <object class="Transition" serializationversion="3" id="4">
         <property name="name" class="String">Extract HTML</property>
         <property name="stepAction" class="Extract" serializationversion="1">
           <property name="domToTextConverter" class="kapow.robot.plugin.common.support.vtopia.converter.HTMLTextOutputtingHTMLDOMToTextConverter"/>
@@ -133,14 +131,14 @@
         </property>
         <property name="enabled" class="Boolean">true</property>
         <property name="changedProperties" class="java.util.HashSet">
-          <element class="String" id="6">name</element>
+          <element class="String" id="5">name</element>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="7">
+      <object class="Transition" serializationversion="3" id="6">
         <property name="name" class="String">Click MC_Screenshots</property>
         <property name="stepAction" class="Click" serializationversion="0">
           <property name="browserConfigurationSpecification" class="BrowserConfigurationSpecificationWebKit" serializationversion="27">
-            <property name="ancestorProvider" class="BrowserConfigurationSpecificationAncestorProviderForStep" id="8"/>
+            <property name="ancestorProvider" class="BrowserConfigurationSpecificationAncestorProviderForStep" id="7"/>
           </property>
         </property>
         <property name="elementFinders" class="ElementFinders">
@@ -156,17 +154,17 @@
         </property>
         <property name="enabled" class="Boolean">true</property>
         <property name="changedProperties" class="java.util.HashSet">
-          <element idref="6"/>
+          <element idref="5"/>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="9">
+      <object class="Transition" serializationversion="3" id="8">
         <property name="name" class="String">Extract Bin</property>
         <property name="stepAction" class="ExtractSourceStepAction">
           <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
             <property name="name" class="String">allTypes.bin</property>
           </property>
         </property>
-        <property name="elementFinders" class="ElementFinders" id="10"/>
+        <property name="elementFinders" class="ElementFinders" id="9"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
@@ -174,7 +172,7 @@
         <property name="enabled" class="Boolean">true</property>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="11">
+      <object class="Transition" serializationversion="3" id="10">
         <property name="name" class="String">Create Page</property>
         <property name="stepAction" class="CreatePage2">
           <property name="contents" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -183,10 +181,10 @@
             </property>
           </property>
           <property name="browserConfigurationSpecification" class="BrowserConfigurationSpecificationWebKit" serializationversion="27">
-            <property name="ancestorProvider" idref="8"/>
+            <property name="ancestorProvider" idref="7"/>
           </property>
         </property>
-        <property name="elementFinders" idref="10"/>
+        <property name="elementFinders" idref="9"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
@@ -194,7 +192,7 @@
         <property name="enabled" class="Boolean">true</property>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="12">
+      <object class="Transition" serializationversion="3" id="11">
         <property name="name" class="String">Set Current Window</property>
         <property name="stepAction" class="SetCurrentWindow" serializationversion="1">
           <property name="windowReferenceProvider" class="kapow.robot.plugin.common.stepaction.windowreferenceprovider.NamedWindowReferenceProvider">
@@ -205,7 +203,7 @@
             </property>
           </property>
         </property>
-        <property name="elementFinders" idref="10"/>
+        <property name="elementFinders" idref="9"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
@@ -213,7 +211,7 @@
         <property name="enabled" class="Boolean">true</property>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="13">
+      <object class="Transition" serializationversion="3" id="12">
         <property name="name" class="String">Extract Image</property>
         <property name="stepAction" class="ExtractImage" serializationversion="0">
           <property name="storeIn" class="kapow.robot.plugin.common.support.dataloader.BinaryVariableDataStoreProvider" serializationversion="1">
@@ -222,7 +220,7 @@
             </property>
           </property>
           <property name="browserConfigurationSpecification" class="BrowserConfigurationSpecificationWebKit" serializationversion="27">
-            <property name="ancestorProvider" idref="8"/>
+            <property name="ancestorProvider" idref="7"/>
           </property>
         </property>
         <property name="elementFinders" class="ElementFinders">
@@ -239,57 +237,48 @@
         <property name="enabled" class="Boolean">true</property>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="14">
-        <property name="name" class="String">Return Value</property>
-        <property name="stepAction" class="ReturnVariable" serializationversion="1">
-          <property name="variableName" class="kapow.robot.plugin.common.support.VariableName">
-            <property name="name" idref="0"/>
-          </property>
-        </property>
-        <property name="elementFinders" idref="10"/>
-        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
-        <property name="comment">
-          <null/>
-        </property>
-        <property name="enabled" class="Boolean">true</property>
-        <property name="changedProperties" class="java.util.HashSet"/>
-      </object>
-      <object class="End" id="15"/>
+      <object class="End" id="13"/>
     </steps>
     <blockEndStep class="BlockEndStep"/>
     <edges class="ArrayList">
       <object class="TransitionEdge">
-        <from idref="1"/>
-        <to idref="2"/>
+        <from idref="0"/>
+        <to idref="1"/>
         <name/>
         <comment/>
       </object>
       <object class="TransitionEdge">
-        <from idref="2"/>
+        <from idref="1"/>
+        <to idref="3"/>
+        <name/>
+        <comment/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="3"/>
         <to idref="4"/>
         <name/>
         <comment/>
       </object>
       <object class="TransitionEdge">
         <from idref="4"/>
-        <to idref="5"/>
+        <to idref="6"/>
         <name/>
         <comment/>
       </object>
       <object class="TransitionEdge">
-        <from idref="5"/>
-        <to idref="7"/>
+        <from idref="6"/>
+        <to idref="8"/>
         <name/>
         <comment/>
       </object>
       <object class="TransitionEdge">
-        <from idref="7"/>
-        <to idref="9"/>
+        <from idref="8"/>
+        <to idref="10"/>
         <name/>
         <comment/>
       </object>
       <object class="TransitionEdge">
-        <from idref="9"/>
+        <from idref="10"/>
         <to idref="11"/>
         <name/>
         <comment/>
@@ -303,18 +292,6 @@
       <object class="TransitionEdge">
         <from idref="12"/>
         <to idref="13"/>
-        <name/>
-        <comment/>
-      </object>
-      <object class="TransitionEdge">
-        <from idref="13"/>
-        <to idref="14"/>
-        <name/>
-        <comment/>
-      </object>
-      <object class="TransitionEdge">
-        <from idref="14"/>
-        <to idref="15"/>
         <name/>
         <comment/>
       </object>
